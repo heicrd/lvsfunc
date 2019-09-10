@@ -25,12 +25,44 @@ core = vs.core
 # TODO: Write function that only masks px of a certain color/threshold of colors
 
 
-def compare(clip_a: vs.VideoNode, clip_b: vs.VideoNode, *frames: int, mark: bool = False, mark_a: str = ' Clip A ',
+def compare(*clips: List[vs.VideoNode], frames: List[int] = None, stack: bool = False,
+             height: int = None, stack_vertical: bool = False,
+             force_format=True) -> vs.VideoNode:
+    """
+    Compare frames from multiple clips to one another, either in list format or stack format.
+
+    Shorthand for this function is "comp".
+    """
+    def _clip_sum(clips: List[vs.VideoNode]) -> vs.VideoNode:
+        if len(clips) == 1:
+            return clips[0]
+        return sum(clips[1:], clips[0])
+
+    if force_format:
+        if height:
+            clips = [c.resize.Point(format=clips[0].format) for c in clips]
+        else:
+            clips = [c.resize.Bicubic(clips[0].width, clips[0].height, format=clips[0].format) for c in clips]
+    elif len(set([c.format.id for c in clips])) != 1:
+        raise ValueError('compare: The format of every clip must be equal')
+
+    if height:
+        clips = [c.resize.Bicubic(get_w(height), height) for c in clips]
+
+    if stack:
+        clips = core.std.StackVertical(clips) if stack_vertical else core.std.StackHorizontal(clips)
+
+    if frames:
+        pairs = [_clip_sum([c[frame] for c in clips]) for frame in frames]
+    else:
+        pairs = core.std.Interleave(clips)
+    return pairs
+
+
+def list_compare(clip_a: vs.VideoNode, clip_b: vs.VideoNode, *frames: int, mark: bool = False, mark_a: str = ' Clip A ',
             mark_b: str = ' Clip B ', fontsize: int = 57) -> vs.VideoNode:
     """
     Allows for the same frames from two different clips to be compared by putting them next to each other in a list.
-
-    Shorthand for this function is "comp".
 
     :param mark: bool:  Whether or not to label the clips in top left. (Default value = False)
 
