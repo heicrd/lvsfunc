@@ -382,7 +382,8 @@ def source(file: str, force_lsmas: bool = False, ref=None, fpsnum: int = None, f
 # Aliases
 src = source
 comp = compare
+lcomp = list_compare
 scomp = stack_compare
 qden = quick_denoise
-denoise = quick_denoise  # (backwards compatibility, will be removed later)
+denoise = quick_denoise  # for backwards compatibility
 NnEedi3 = nneedi3_clamp  # for backwards compatibility
