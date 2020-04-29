@@ -199,11 +199,18 @@ or reach out to me on Discord (LightArrowsEXE#0476)!</p>
 <li><p><a class="reference external" href="https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale">vapoursynth-descale</a></p></li>
 <li><p><a class="reference external" href="https://github.com/dubhater/vapoursynth-nnedi3">vapoursynth-nnedi3</a></p></li>
 <li><p><a class="reference external" href="https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3">vapoursynth-eedi3</a></p></li>
+<li><p><a class="reference external" href="https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls">vapoursynth-readmpls</a></p></li>
+<li><p><a class="reference external" href="https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex">vapoursynth-retinex</a></p></li>
 <li><p><a class="reference external" href="https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-caffe">vapoursynth-waifu2x-caffe</a></p></li>
+<li><p><a class="reference external" href="https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny">vapoursynth-tcanny</a></p></li>
 <li><p><a class="reference external" href="https://github.com/MonoS/VS-ContinuityFixer">vs-continuityfixer</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sekrit-twc/zimg">zimg</a></p></li>
 <li><p><a class="reference external" href="https://github.com/sekrit-twc/znedi3">znedi3</a></p></li>
 </ul>
-<p>This list is non-exhaustive, as dependencies may have their own dependencies.</p>
+<p>This list is non-exhaustive, as dependencies may have their own dependencies.
+An attempt has been made to document major dependencies on a per-function basis.
+Unfortunately, *func family modules have complex dependency graphs and documenting
+them is beyond the scope of this module.</p>
 </div>
 <div class="section" id="modules">
 <h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
@@ -357,6 +364,16 @@ or reach out to me on Discord (LightArrowsEXE#0476)!</p>
 <code class="sig-prename descclassname">lvsfunc.aa.</code><code class="sig-name descname">nneedi3_clamp</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">strength=1</em>, <em class="sig-param">mask=None</em>, <em class="sig-param">ret_mask=False</em>, <em class="sig-param">show_mask=False</em>, <em class="sig-param">opencl=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.aa.nneedi3_clamp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function written by Zastin to clamp eedi3 to nnedi3 for the purpose of reducing artifacts.
 This should fix every issue created by eedi3. For example: <a class="reference external" href="https://i.imgur.com/hYVhetS.jpg">https://i.imgur.com/hYVhetS.jpg</a></p>
+<p>Dependencies:</p>
+<ul class="simple">
+<li><p>kagefunc (optional: retinex edgemask)</p></li>
+<li><p>vapoursynth-retinex (optional: retinex edgemask)</p></li>
+<li><p>vapoursynth-tcanny (optional: retinex edgemask)</p></li>
+<li><p>vapoursynth-eedi3</p></li>
+<li><p>vapoursynth-nnedi3 or znedi3</p></li>
+<li><p>vapoursynth-nnedi3cl (optional: opencl)</p></li>
+<li><p>vsTAAmbk</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -384,6 +401,7 @@ This should fix every issue created by eedi3. For example: <a class="reference e
 over a clip by using Nnedi3, transposing, using Nnedi3 again, and transposing a final time.
 This results in overall stronger anti-aliasing.
 Useful for shows like Yuru Camp with bad lineart problems.</p>
+<p>Dependencies: vapoursynth-eedi3, vapoursynth-nnedi3, znedi3</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -407,6 +425,7 @@ Useful for shows like Yuru Camp with bad lineart problems.</p>
 an upscaled single-rate AA to deal with heavy aliasing.
 Useful for Web rips, where the source quality is not good enough to descale,
 but you still want to deal with some bad aliasing and lineart.</p>
+<p>Dependencies: fmtconv, rgsf (optional: 32bit clip), vapoursynth-eedi3, vapoursynth-nnedi3</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -460,6 +479,7 @@ or to be used to analyze something from a single clip.</p>
 Clips are automatically resampled to 8bit YUV -&gt; RGB24 to emulate how a monitor shows the frame.
 This can be disabled by setting <cite>disable_resample</cite> to True.</p>
 <p>Alias for this function is “comp”.</p>
+<p>Dependencies: mvsfunc</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -591,6 +611,7 @@ to fix up CD. DA can then be dropped due to it being an interlaced frame.</p>
 We can mitigate this by repairing the frame with the non-blended frame before it.</p>
 <p>For more information, please refer to this blogpost by torchlight:
 <a class="reference external" href="https://mechaweaponsvidya.wordpress.com/2012/09/13/adventures-in-deblending/">https://mechaweaponsvidya.wordpress.com/2012/09/13/adventures-in-deblending/</a></p>
+<p>Dependencies: rgsf (optional: 32bit clip)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -614,6 +635,8 @@ We can mitigate this by repairing the frame with the non-blended frame before it
 You can also allow it to decimate the clip, or keep it disabled if you wish to handle the decimating yourself.
 Vinverse can also be disabled, allowing for less aggressive decombing. Note that this means far more combing will be left over!</p>
 <p>Function written by Midlifecrisis from the WEEB AUTISM server, and slightly modified by LightArrowsEXE.</p>
+<p>Dependencies: combmask, havsfunc (QTGMC), rgsf (optional: 32bit clip)</p>
+<p>Deciphering havsfunc’s dependencies is left as an exercise for the user.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -638,6 +661,7 @@ Vinverse can also be disabled, allowing for less aggressive decombing. Note that
 <dd><p>Directional deshimmering function.</p>
 <p>Only works (in the few instances it does, anyway) for obvious horizontal and vertical shimmering.
 Odds of success are low. But if you’re desperate, it’s worth a shot.</p>
+<p>Dependencies: vapoursynth-nnedi3</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -664,6 +688,7 @@ Odds of success are low. But if you’re desperate, it’s worth a shot.</p>
 Special thanks to thebombzen and kageru for essentially writing the bulk of this.</p>
 <p>Performs one-dimensional sharpening as such: “Original + (Original - blurred) * Strength”</p>
 <p>This particular function is recommended for SD content, specifically after deinterlacing.</p>
+<p>Dependencies: knlmeanscl</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -707,6 +732,8 @@ you’re probably better off using that specific filter rather than this wrapper
 This will probably be removed in a future commit.</p>
 <p>BM3D is used for denoising the luma.</p>
 <p>Special thanks to kageru for helping me out with some ideas and pointers.</p>
+<p>Dependencies: havsfunc (optional: SMDegrain mode), mvsfunc</p>
+<p>Deciphering havsfunc’s dependencies is left as an excercise for the user.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -767,6 +794,7 @@ This will probably be removed in a future commit.</p>
 <p>Fixes the issues with over- and undershoot that it may create when fixing the edges,
 and adds what are in my opinion “more sane” ways of handling the parameters and given values.</p>
 <p>…If possible, you should be using bbmod instead, though.</p>
+<p>Dependencies: vs-continuityfixer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -865,6 +893,15 @@ Tuple values indicate inclusive ranges.</p></li>
 Automatically determines if ffms2 or L-SMASH should be used to import a clip, but L-SMASH can be forced.
 It also automatically determines if an image has been imported.
 You can set its fps using ‘fpsnum’ and ‘fpsden’, or using a reference clip with ‘ref’.</p>
+<p>Dependencies:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>d2vsource (optional: d2v sources)</p></li>
+<li><p>dgdecodenv (optional: dgi sources)</p></li>
+<li><p>mvsfunc (optional: reference clip mode)</p></li>
+<li><p>vapoursynth-readmpls (optional: mpls sources)</p></li>
+</ul>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -891,6 +928,7 @@ You can set its fps using ‘fpsnum’ and ‘fpsden’, or using a reference cl
 <dd><p>Simple function to wipe a row with a blank clip.
 You can also give it a different clip to replace a row with.</p>
 <p>if width2, height2, etc. are given, it will merge the two masks.</p>
+<p>Dependencies: kagefunc</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -949,6 +987,19 @@ If it does not exceed the threshold, the frame will upscaled using either nnedi3
 Consider scenefiltering OP/EDs with a different descale function instead.</p>
 <p>The code for _get_error was mostly taken from kageru’s Made in Abyss script.
 Special thanks to Lypheo for holding my hand as this was written.</p>
+<p>Dependencies:</p>
+<ul class="simple">
+<li><p>fmtconv</p></li>
+<li><p>mvsfunc (optional: nnedi3_resample)</p></li>
+<li><p>nnedi3_rpow2 or edi_rpow2 (optional: nnedi3_rpow2 upscale)</p></li>
+<li><p>nnedi3_resample (optional: nnedi3_resample upscale)</p></li>
+<li><p>rgsf (optional: upscaled_sraa with 32bit clip)</p></li>
+<li><p>vapoursynth-descale</p></li>
+<li><p>vapoursynth-eedi3 (optional: upscaled_sraa upscale)</p></li>
+<li><p>vapoursynth-nnedi3 (optional: nnedi3_resample, nnedi3_rpow2, upscaled_sraa upscale)</p></li>
+<li><p>vapoursynth-waifu2x-caffe (optional: waifu2x upscale)</p></li>
+<li><p>zimg</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -959,7 +1010,7 @@ Special thanks to Lypheo for holding my hand as this was written.</p>
 <li><p><strong>c</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Fraction</span></code>]) – C-param for bicubic kernel (Default: 1 / 3)</p></li>
 <li><p><strong>taps</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Taps param for lanczos kernel (Default: 4)</p></li>
 <li><p><strong>threshold</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Threshold for deciding to descale or leave the original frame (Default: 0.003)</p></li>
-<li><p><strong>upscaler</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Which upscaler to use (“nnedi3_rpow2” (default), “upscaled_sraa”, “waifu2x” (caffe))</p></li>
+<li><p><strong>upscaler</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Which upscaler to use (“nnedi3_rpow2” (default), “nnedi3_resample”, “upscaled_sraa”, “waifu2x” (caffe))</p></li>
 <li><p><strong>upscale_args</strong> – Arguments passed to upscaler</p></li>
 </ul>
 </dd>
@@ -986,6 +1037,7 @@ a steady resolution before further processing.</p>
 <p>Setting rescaled will use <cite>smart_rescaler</cite> to reupscale the clip to its original resolution.
 This will return a proper YUV clip as well. If rescaled is set to False, the returned clip
 will be GRAY.</p>
+<p>Dependencies: vapoursynth-descale</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1014,6 +1066,7 @@ will be GRAY.</p>
 <dd><p>A quick ‘n easy wrapper used to re-upscale a clip descaled with smart_descale.
 Uses znedi3, which seems to miraculously work with a multi-res clip.</p>
 <p>Stolen from Varde.</p>
+<p>Dependencies: znedi3</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1044,6 +1097,7 @@ descales and reupscales a given clip, allowing you to compare the two easily.</p
 <p>When comparing, it is recommended to do atleast a 4x zoom using Nearest Neighbor.
 I also suggest using ‘compare’, as that will make comparison a lot easier.</p>
 <p>Some of this code was leveraged from DescaleAA found in fvsfunc.</p>
+<p>Dependencies: vapoursynth-descale</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1100,6 +1154,7 @@ Can be used as-is if you so please.</p>
 <dt id="lvsfunc.util.create_dmask">
 <code class="sig-prename descclassname">lvsfunc.util.</code><code class="sig-name descname">create_dmask</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">luma_scaling=8.0</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.util.create_dmask" title="Permalink to this definition">¶</a></dt>
 <dd><p>A wrapper to create a luma mask for denoising, debanding, etc.</p>
+<p>Dependencies: adaptivegrain</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1161,6 +1216,7 @@ respectively for bicubic and taps is bound to filter_param_a for lanczos</p></li
 <code class="sig-prename descclassname">lvsfunc.util.</code><code class="sig-name descname">pick_repair</code><span class="sig-paren">(</span><em class="sig-param">clip</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.util.pick_repair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns rgvs.Repair if the clip is 16 bit or lower, else rgsf.Repair.
 This is done because rgvs doesn’t work with float, but rgsf does for whatever reason.</p>
+<p>Dependencies: rgsf</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p>
