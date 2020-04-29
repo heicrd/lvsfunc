@@ -1,0 +1,1271 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>lvsfunc documentation &mdash; lvsfunc 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> lvsfunc
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">lvsfunc documentation</a></li>
+<li><a class="reference internal" href="#module-lvsfunc">About</a></li>
+<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li><a class="reference internal" href="#modules">Modules</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#lvsfunc-aa">lvsfunc.aa</a></li>
+<li><a class="reference internal" href="#lvsfunc-comparison">lvsfunc.comparison</a></li>
+<li><a class="reference internal" href="#lvsfunc-deinterlace">lvsfunc.deinterlace</a></li>
+<li><a class="reference internal" href="#lvsfunc-denoise">lvsfunc.denoise</a></li>
+<li><a class="reference internal" href="#lvsfunc-misc">lvsfunc.misc</a></li>
+<li><a class="reference internal" href="#lvsfunc-scale">lvsfunc.scale</a></li>
+<li><a class="reference internal" href="#lvsfunc-util">lvsfunc.util</a></li>
+<li><a class="reference internal" href="#footer">Footer</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">lvsfunc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>lvsfunc documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lvsfunc-documentation">
+<h1>lvsfunc documentation<a class="headerlink" href="#lvsfunc-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="module-lvsfunc">
+<span id="about"></span><h1>About<a class="headerlink" href="#module-lvsfunc" title="Permalink to this headline">¶</a></h1>
+<p>lvsfunc, a collection of VapourSynth functions and wrappers written and/or “borrowed” by LightArrowsEXE.
+Information on how every function/wrapper works can be found in the docstrings,
+and a full list of functions can be found in the README.</p>
+<p>If you spot any issues, please do not hesitate to send in a Pull Request
+or reach out to me on Discord (LightArrowsEXE#0476)!</p>
+</div>
+<div class="section" id="dependencies">
+<h1>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h1>
+<p>lvsfunc depends on the following third-party scripts:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gist.github.com/YamashitaRen/020c497524e794779d9c">edi_rpow2</a></p></li>
+<li><p><a class="reference external" href="https://github.com/HomeOfVapourSynthEvolution/havsfunc">havsfunc</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Irrational-Encoding-Wizardry/kagefunc">kagefunc</a></p></li>
+<li><p><a class="reference external" href="https://github.com/HomeOfVapourSynthEvolution/mvsfunc">mvsfunc</a></p></li>
+<li><p><a class="reference external" href="https://github.com/mawen1250/VapourSynth-script/blob/master/nnedi3_resample.py">nnedi3_resample</a></p></li>
+<li><p><a class="reference external" href="https://github.com/darealshinji/vapoursynth-plugins/blob/master/scripts/nnedi3_rpow2.py">nnedi3_rpow2</a></p></li>
+<li><p><a class="reference external" href="https://github.com/HomeOfVapourSynthEvolution/vsTAAmbk">vsTAAmbk</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Irrational-Encoding-Wizardry/vsutil">vsutil</a></p></li>
+</ul>
+<p>The following Vapoursynth libraries are also required for full functionality:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://git.kageru.moe/kageru/adaptivegrain">adaptivegrain</a></p></li>
+<li><p><a class="reference external" href="https://mega.nz/#!whtkTShS!JsDhi-_QGs-kZkzWqgcXHX2MQII4Bl9Y4Ft0zHnXDvk">combmask</a></p></li>
+<li><p><a class="reference external" href="https://github.com/dwbuiten/d2vsource">d2vsource</a></p></li>
+<li><p><a class="reference external" href="http://rationalqm.us/dgdecnv/dgdecnv.html">dgdecnv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/EleonoreMizo/fmtconv">fmtconv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Khanattila/KNLMeansCL">knlmeanscl</a></p></li>
+<li><p><a class="reference external" href="https://github.com/IFeelBloated/RGSF">rgsf</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale">vapoursynth-descale</a></p></li>
+<li><p><a class="reference external" href="https://github.com/dubhater/vapoursynth-nnedi3">vapoursynth-nnedi3</a></p></li>
+<li><p><a class="reference external" href="https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3">vapoursynth-eedi3</a></p></li>
+<li><p><a class="reference external" href="https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-caffe">vapoursynth-waifu2x-caffe</a></p></li>
+<li><p><a class="reference external" href="https://github.com/MonoS/VS-ContinuityFixer">vs-continuityfixer</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sekrit-twc/znedi3">znedi3</a></p></li>
+</ul>
+<p>This list is non-exhaustive, as dependencies may have their own dependencies.</p>
+</div>
+<div class="section" id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#module-lvsfunc.aa" title="lvsfunc.aa"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.aa</span></code></a></p></td>
+<td><p>Functions for various anti-aliasing functions and wrappers.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#module-lvsfunc.comparison" title="lvsfunc.comparison"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.comparison</span></code></a></p></td>
+<td><p>Functions intended to be used to make comparisons between different sources or to be used to analyze something from a single clip.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#module-lvsfunc.deinterlace" title="lvsfunc.deinterlace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.deinterlace</span></code></a></p></td>
+<td><p>Functions to help with deinterlacing or deinterlaced content.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#module-lvsfunc.denoise" title="lvsfunc.denoise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.denoise</span></code></a></p></td>
+<td><p>Wrappers and masks for denoising.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#module-lvsfunc.misc" title="lvsfunc.misc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.misc</span></code></a></p></td>
+<td><p>Miscellaneous functions and wrappers that didn’t really have a place in any other submodules.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#module-lvsfunc.scale" title="lvsfunc.scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.scale</span></code></a></p></td>
+<td><p>Functions for (de)scaling.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#module-lvsfunc.util" title="lvsfunc.util"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.util</span></code></a></p></td>
+<td><p>Helper functions for the main functions in the script.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.aa.nneedi3_clamp" title="lvsfunc.aa.nneedi3_clamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.aa.nneedi3_clamp</span></code></a>(clip[, strength, …])</p></td>
+<td><p>Function written by Zastin to clamp eedi3 to nnedi3 for the purpose of reducing artifacts.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.aa.transpose_aa" title="lvsfunc.aa.transpose_aa"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.aa.transpose_aa</span></code></a>(clip[, eedi3])</p></td>
+<td><p>Function written by Zastin and modified by LightArrowsEXE to perform anti-aliasing over a clip by using Nnedi3, transposing, using Nnedi3 again, and transposing a final time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.aa.upscaled_sraa" title="lvsfunc.aa.upscaled_sraa"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.aa.upscaled_sraa</span></code></a>(clip[, rfactor, …])</p></td>
+<td><p>Another AA written by Zastin and modified by LightArrowsEXE to perform an upscaled single-rate AA to deal with heavy aliasing.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.comparison.compare" title="lvsfunc.comparison.compare"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.comparison.compare</span></code></a>(clip_a, clip_b[, …])</p></td>
+<td><p>Allows for the same frames from two different clips to be compared by interleaving them into a single clip.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.comparison.stack_compare" title="lvsfunc.comparison.stack_compare"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.comparison.stack_compare</span></code></a>(*clips[, …])</p></td>
+<td><p>A simple wrapper that allows you to compare two clips by stacking them.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.comparison.stack_planes" title="lvsfunc.comparison.stack_planes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.comparison.stack_planes</span></code></a>(clip[, …])</p></td>
+<td><p>Stacks the planes of a clip.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.comparison.tvbd_diff" title="lvsfunc.comparison.tvbd_diff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.comparison.tvbd_diff</span></code></a>(tv, bd[, thr, …])</p></td>
+<td><p>Creates a standard <cite>stack_compare</cite> between frames from two clips that have differences.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.deinterlace.deblend" title="lvsfunc.deinterlace.deblend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.deinterlace.deblend</span></code></a>(clip[, rep])</p></td>
+<td><p>A simple function to fix deblending for interlaced video with an AABBA blending pattern, where A is a normal frame and B is a blended frame.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.deinterlace.decomb" title="lvsfunc.deinterlace.decomb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.deinterlace.decomb</span></code></a>(clip, TFF[, …])</p></td>
+<td><p>Does some aggressive filtering to get rid of the combing on a interlaced/telecined source.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.deinterlace.dir_deshimmer" title="lvsfunc.deinterlace.dir_deshimmer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.deinterlace.dir_deshimmer</span></code></a>(clip[, …])</p></td>
+<td><p>Directional deshimmering function.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.deinterlace.dir_unsharp" title="lvsfunc.deinterlace.dir_unsharp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.deinterlace.dir_unsharp</span></code></a>(clip[, …])</p></td>
+<td><p>Diff’d directional unsharpening function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.denoise.quick_denoise" title="lvsfunc.denoise.quick_denoise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.denoise.quick_denoise</span></code></a>(clip[, ref, …])</p></td>
+<td><p>This wrapper is used to denoise both the luma and chroma using various denoisers of your choosing.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.misc.edgefixer" title="lvsfunc.misc.edgefixer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.misc.edgefixer</span></code></a>(clip[, left, right, …])</p></td>
+<td><p>A wrapper for ContinuityFixer (<a class="reference external" href="https://github.com/MonoS/VS-ContinuityFixer">https://github.com/MonoS/VS-ContinuityFixer</a>).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.misc.fix_cr_tint" title="lvsfunc.misc.fix_cr_tint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.misc.fix_cr_tint</span></code></a>(clip[, value])</p></td>
+<td><p>Tries to forcibly fix Crunchyroll’s green tint by adding pixel values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.misc.limit_dark" title="lvsfunc.misc.limit_dark"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.misc.limit_dark</span></code></a>(clip, filtered[, …])</p></td>
+<td><p>Replaces frames in a clip with a filtered clip when the frame’s darkness exceeds the threshold.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.misc.replace_ranges" title="lvsfunc.misc.replace_ranges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.misc.replace_ranges</span></code></a>(clip_a, clip_b, …)</p></td>
+<td><p>A replacement for ReplaceFramesSimple that uses ints and tuples rather than a string.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.misc.source" title="lvsfunc.misc.source"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.misc.source</span></code></a>(file[, ref, …])</p></td>
+<td><p>Generic clip import function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.misc.wipe_row" title="lvsfunc.misc.wipe_row"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.misc.wipe_row</span></code></a>(clip[, secondary, …])</p></td>
+<td><p>Simple function to wipe a row with a blank clip.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.scale.conditional_descale" title="lvsfunc.scale.conditional_descale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.scale.conditional_descale</span></code></a>(clip, height)</p></td>
+<td><p>Descales and reupscales a clip; if the difference exceeds the threshold, the frame will not be descaled.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.scale.smart_descale" title="lvsfunc.scale.smart_descale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.scale.smart_descale</span></code></a>(clip, resolutions)</p></td>
+<td><p>Allows you to descale to multiple native resolutions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.scale.smart_reupscale" title="lvsfunc.scale.smart_reupscale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.scale.smart_reupscale</span></code></a>(clip[, width, …])</p></td>
+<td><p>A quick ‘n easy wrapper used to re-upscale a clip descaled with smart_descale.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.scale.test_descale" title="lvsfunc.scale.test_descale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.scale.test_descale</span></code></a>(clip, height[, …])</p></td>
+<td><p>Generic function to test descales with; descales and reupscales a given clip, allowing you to compare the two easily.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.util.create_dmask" title="lvsfunc.util.create_dmask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.util.create_dmask</span></code></a>(clip[, luma_scaling])</p></td>
+<td><p>A wrapper to create a luma mask for denoising, debanding, etc.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.util.get_scale_filter" title="lvsfunc.util.get_scale_filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.util.get_scale_filter</span></code></a>(kernel, **kwargs)</p></td>
+<td><p>kagefunc’s get_descale_filter, but for the internal resizers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.util.one_plane" title="lvsfunc.util.one_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.util.one_plane</span></code></a>(clip)</p></td>
+<td><p>Returns True if the clip contains only one plane.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.util.pick_repair" title="lvsfunc.util.pick_repair"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.util.pick_repair</span></code></a>(clip)</p></td>
+<td><p>Returns rgvs.Repair if the clip is 16 bit or lower, else rgsf.Repair.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.util.quick_resample" title="lvsfunc.util.quick_resample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.util.quick_resample</span></code></a>(clip, function, …)</p></td>
+<td><p>A function to quickly resample to 16 bit and back to the original depth.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.util.resampler" title="lvsfunc.util.resampler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.util.resampler</span></code></a>(clip, bitdepth)</p></td>
+<td><p>Really just a barebones version of fvsfunc’s Depth to remove a common dependency.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="lvsfunc-aa">
+<h1>lvsfunc.aa<a class="headerlink" href="#lvsfunc-aa" title="Permalink to this headline">¶</a></h1>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.aa.nneedi3_clamp" title="lvsfunc.aa.nneedi3_clamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.aa.nneedi3_clamp</span></code></a>(clip[, strength, …])</p></td>
+<td><p>Function written by Zastin to clamp eedi3 to nnedi3 for the purpose of reducing artifacts.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.aa.transpose_aa" title="lvsfunc.aa.transpose_aa"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.aa.transpose_aa</span></code></a>(clip[, eedi3])</p></td>
+<td><p>Function written by Zastin and modified by LightArrowsEXE to perform anti-aliasing over a clip by using Nnedi3, transposing, using Nnedi3 again, and transposing a final time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.aa.upscaled_sraa" title="lvsfunc.aa.upscaled_sraa"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.aa.upscaled_sraa</span></code></a>(clip[, rfactor, …])</p></td>
+<td><p>Another AA written by Zastin and modified by LightArrowsEXE to perform an upscaled single-rate AA to deal with heavy aliasing.</p></td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="module-lvsfunc.aa"></span><p>Functions for various anti-aliasing functions and wrappers.</p>
+<dl class="function">
+<dt id="lvsfunc.aa.nneedi3_clamp">
+<code class="sig-prename descclassname">lvsfunc.aa.</code><code class="sig-name descname">nneedi3_clamp</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">strength=1</em>, <em class="sig-param">mask=None</em>, <em class="sig-param">ret_mask=False</em>, <em class="sig-param">show_mask=False</em>, <em class="sig-param">opencl=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.aa.nneedi3_clamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function written by Zastin to clamp eedi3 to nnedi3 for the purpose of reducing artifacts.
+This should fix every issue created by eedi3. For example: <a class="reference external" href="https://i.imgur.com/hYVhetS.jpg">https://i.imgur.com/hYVhetS.jpg</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>strength</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Set threshold strength (Default: 1)</p></li>
+<li><p><strong>mask</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>]) – Clip to use for custom mask (Default: None)</p></li>
+<li><p><strong>ret_mask</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Replace default mask with a retinex edgemask (Default: False)</p></li>
+<li><p><strong>show_mask</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Return mask instead of clip (Default: False)</p></li>
+<li><p><strong>opencl</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – OpenCL acceleration (Default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Antialiased clip</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.aa.transpose_aa">
+<code class="sig-prename descclassname">lvsfunc.aa.</code><code class="sig-name descname">transpose_aa</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">eedi3=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.aa.transpose_aa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function written by Zastin and modified by LightArrowsEXE to perform anti-aliasing
+over a clip by using Nnedi3, transposing, using Nnedi3 again, and transposing a final time.
+This results in overall stronger anti-aliasing.
+Useful for shows like Yuru Camp with bad lineart problems.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>eedi3</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Use eedi3 for the interpolation (Default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Antialiased clip</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.aa.upscaled_sraa">
+<code class="sig-prename descclassname">lvsfunc.aa.</code><code class="sig-name descname">upscaled_sraa</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">rfactor=1.5</em>, <em class="sig-param">rep=None</em>, <em class="sig-param">h=None</em>, <em class="sig-param">ar=None</em>, <em class="sig-param">sharp_downscale=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.aa.upscaled_sraa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Another AA written by Zastin and modified by LightArrowsEXE to perform
+an upscaled single-rate AA to deal with heavy aliasing.
+Useful for Web rips, where the source quality is not good enough to descale,
+but you still want to deal with some bad aliasing and lineart.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>rfactor</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Image enlargement factor. 1.3..2 makes it comparable in strength to vsTAAmbk.
+It is not recommended to go below 1.3 (Default: 1.5)</p></li>
+<li><p><strong>rep</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Repair mode (Default: None)</p></li>
+<li><p><strong>h</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Set custom height. Width and aspect ratio are auto-calculated (Default: None)</p></li>
+<li><p><strong>ar</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Force custom aspect ratio. Width is auto-calculated (Default: None)</p></li>
+<li><p><strong>sharp_downscale</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Use a sharper downscaling kernel (inverse gauss) (Default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Antialiased clip</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="lvsfunc-comparison">
+<h1>lvsfunc.comparison<a class="headerlink" href="#lvsfunc-comparison" title="Permalink to this headline">¶</a></h1>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.comparison.compare" title="lvsfunc.comparison.compare"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.comparison.compare</span></code></a>(clip_a, clip_b[, …])</p></td>
+<td><p>Allows for the same frames from two different clips to be compared by interleaving them into a single clip.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.comparison.stack_compare" title="lvsfunc.comparison.stack_compare"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.comparison.stack_compare</span></code></a>(*clips[, …])</p></td>
+<td><p>A simple wrapper that allows you to compare two clips by stacking them.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.comparison.stack_planes" title="lvsfunc.comparison.stack_planes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.comparison.stack_planes</span></code></a>(clip[, …])</p></td>
+<td><p>Stacks the planes of a clip.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.comparison.tvbd_diff" title="lvsfunc.comparison.tvbd_diff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.comparison.tvbd_diff</span></code></a>(tv, bd[, thr, …])</p></td>
+<td><p>Creates a standard <cite>stack_compare</cite> between frames from two clips that have differences.</p></td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="module-lvsfunc.comparison"></span><p>Functions intended to be used to make comparisons between different sources
+or to be used to analyze something from a single clip.</p>
+<dl class="function">
+<dt id="lvsfunc.comparison.compare">
+<code class="sig-prename descclassname">lvsfunc.comparison.</code><code class="sig-name descname">compare</code><span class="sig-paren">(</span><em class="sig-param">clip_a</em>, <em class="sig-param">clip_b</em>, <em class="sig-param">frames=None</em>, <em class="sig-param">rand_total=None</em>, <em class="sig-param">force_resample=True</em>, <em class="sig-param">print_frame=True</em>, <em class="sig-param">mismatch=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.comparison.compare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows for the same frames from two different clips to be compared by interleaving them into a single clip.
+Clips are automatically resampled to 8bit YUV -&gt; RGB24 to emulate how a monitor shows the frame.
+This can be disabled by setting <cite>disable_resample</cite> to True.</p>
+<p>Alias for this function is “comp”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip_a</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Clip to compare</p></li>
+<li><p><strong>clip_b</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Second clip to compare</p></li>
+<li><p><strong>frames</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]]) – List of frames to compare (Default: None)</p></li>
+<li><p><strong>rand_total</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Number of random frames to pick (Default: None)</p></li>
+<li><p><strong>force_resample</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Forcibly resamples the clip to RGB24 (Default: True)</p></li>
+<li><p><strong>print_frame</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Print frame numbers (Default: True)</p></li>
+<li><p><strong>mismatch</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Allow for clips with different formats and dimensions to be compared (Default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Interleaved clip containing specified frames from clip_a and clip_b</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.comparison.stack_compare">
+<code class="sig-prename descclassname">lvsfunc.comparison.</code><code class="sig-name descname">stack_compare</code><span class="sig-paren">(</span><em class="sig-param">*clips</em>, <em class="sig-param">make_diff=False</em>, <em class="sig-param">height=None</em>, <em class="sig-param">warn=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.comparison.stack_compare" title="Permalink to this definition">¶</a></dt>
+<dd><p>A simple wrapper that allows you to compare two clips by stacking them.
+You can stack an infinite amount of clips.</p>
+<p>Best to use when trying to match two sources frame-accurately, however by setting height to the source’s
+height (or None), it can be used for comparing frames.</p>
+<p>Alias for this function is ‘scomp’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clips</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Clips to compare</p></li>
+<li><p><strong>make_diff</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Create and stack a diff (only works if two clips are given) (Default: False)</p></li>
+<li><p><strong>height</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Output height, determined automatically if None (Default: None)</p></li>
+<li><p><strong>warn</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Prints the lengths of every given clip if lengths don’t match (Default: True)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Clip with clips stacked</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.comparison.stack_planes">
+<code class="sig-prename descclassname">lvsfunc.comparison.</code><code class="sig-name descname">stack_planes</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">stack_vertical=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.comparison.stack_planes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stacks the planes of a clip.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>stack_vertical</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Stack the planes vertically (Default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Clip with stacked planes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.comparison.tvbd_diff">
+<code class="sig-prename descclassname">lvsfunc.comparison.</code><code class="sig-name descname">tvbd_diff</code><span class="sig-paren">(</span><em class="sig-param">tv</em>, <em class="sig-param">bd</em>, <em class="sig-param">thr=72</em>, <em class="sig-param">return_array=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.comparison.tvbd_diff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a standard <cite>stack_compare</cite> between frames from two clips that have differences.
+Useful for making comparisons between TV and BD encodes, as well as clean and hardsubbed sources.</p>
+<p>There are two methods used here to find differences.
+If thr is below 1, PlaneStatsDiff is used to figure out the differences.
+Else, if thr is equal than or higher than 1, PlaneStatsMin/Max are used.</p>
+<p>Recommended is PlaneStatsMin/Max, as those seem to catch
+more outrageous differences more easily and not return
+too many starved frames.</p>
+<p>Note that this might catch artifacting as differences!
+Make sure you verify every frame with your own eyes!</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tv</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – TV clip</p></li>
+<li><p><strong>bd</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – BD clip</p></li>
+<li><p><strong>thr</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Threshold, &lt;= 1 uses PlaneStatsDiff, &gt;1 uses Max/Min. Max is 128 (Default: 72)</p></li>
+<li><p><strong>return_array</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Return frames as an interleaved comparison (using py:func:<cite>lvsfunc.compare.compare</cite>) (Default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="lvsfunc-deinterlace">
+<h1>lvsfunc.deinterlace<a class="headerlink" href="#lvsfunc-deinterlace" title="Permalink to this headline">¶</a></h1>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.deinterlace.deblend" title="lvsfunc.deinterlace.deblend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.deinterlace.deblend</span></code></a>(clip[, rep])</p></td>
+<td><p>A simple function to fix deblending for interlaced video with an AABBA blending pattern, where A is a normal frame and B is a blended frame.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.deinterlace.decomb" title="lvsfunc.deinterlace.decomb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.deinterlace.decomb</span></code></a>(clip, TFF[, …])</p></td>
+<td><p>Does some aggressive filtering to get rid of the combing on a interlaced/telecined source.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.deinterlace.dir_deshimmer" title="lvsfunc.deinterlace.dir_deshimmer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.deinterlace.dir_deshimmer</span></code></a>(clip[, …])</p></td>
+<td><p>Directional deshimmering function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.deinterlace.dir_unsharp" title="lvsfunc.deinterlace.dir_unsharp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.deinterlace.dir_unsharp</span></code></a>(clip[, …])</p></td>
+<td><p>Diff’d directional unsharpening function.</p></td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="module-lvsfunc.deinterlace"></span><p>Functions to help with deinterlacing or deinterlaced content.</p>
+<dl class="function">
+<dt id="lvsfunc.deinterlace.deblend">
+<code class="sig-prename descclassname">lvsfunc.deinterlace.</code><code class="sig-name descname">deblend</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">rep=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.deinterlace.deblend" title="Permalink to this definition">¶</a></dt>
+<dd><p>A simple function to fix deblending for interlaced video with an AABBA blending pattern,
+where A is a normal frame and B is a blended frame.</p>
+<p>Assuming there’s a constant pattern of frames (labeled A, B, C, CD, and DA in this function),
+blending can be fixed by calculating the C frame by getting halves of CD and DA, and using that
+to fix up CD. DA can then be dropped due to it being an interlaced frame.</p>
+<p>However, doing this will result in some of the artifacting being added to the deblended frame.
+We can mitigate this by repairing the frame with the non-blended frame before it.</p>
+<p>For more information, please refer to this blogpost by torchlight:
+<a class="reference external" href="https://mechaweaponsvidya.wordpress.com/2012/09/13/adventures-in-deblending/">https://mechaweaponsvidya.wordpress.com/2012/09/13/adventures-in-deblending/</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>rep</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Repair mode for the deblended frames, no repair if None (Default: None)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Deblended clip</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.deinterlace.decomb">
+<code class="sig-prename descclassname">lvsfunc.deinterlace.</code><code class="sig-name descname">decomb</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">TFF</em>, <em class="sig-param">decimate=True</em>, <em class="sig-param">vinv=False</em>, <em class="sig-param">sharpen=False</em>, <em class="sig-param">dir='v'</em>, <em class="sig-param">rep=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.deinterlace.decomb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does some aggressive filtering to get rid of the combing on a interlaced/telecined source.
+You can also allow it to decimate the clip, or keep it disabled if you wish to handle the decimating yourself.
+Vinverse can also be disabled, allowing for less aggressive decombing. Note that this means far more combing will be left over!</p>
+<p>Function written by Midlifecrisis from the WEEB AUTISM server, and slightly modified by LightArrowsEXE.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>TFF</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Top-Field-First</p></li>
+<li><p><strong>decimate</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Decimate the video after deinterlacing (Default: True)</p></li>
+<li><p><strong>vinv</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Use vinverse to get rid of additional combing (Default: False)</p></li>
+<li><p><strong>sharpen</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Unsharpen after deinterlacing (Default: False)</p></li>
+<li><p><strong>dir</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Directional vector. ‘v’ = Vertical, ‘h’ = Horizontal (Default: v)</p></li>
+<li><p><strong>rep</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Repair mode for repairing the decombed frame using the original src frame (Default: None)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Decombed clip</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.deinterlace.dir_deshimmer">
+<code class="sig-prename descclassname">lvsfunc.deinterlace.</code><code class="sig-name descname">dir_deshimmer</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">TFF=True</em>, <em class="sig-param">dh=False</em>, <em class="sig-param">transpose=True</em>, <em class="sig-param">show_mask=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.deinterlace.dir_deshimmer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Directional deshimmering function.</p>
+<p>Only works (in the few instances it does, anyway) for obvious horizontal and vertical shimmering.
+Odds of success are low. But if you’re desperate, it’s worth a shot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>TFF</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Top Field First. Set to False if TFF doesn’t work (Default: True)</p></li>
+<li><p><strong>dh</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Interpolate to double the height of given clip beforehand (Default: False)</p></li>
+<li><p><strong>transpose</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Transpose the clip before attempting to deshimmer (Default: True)</p></li>
+<li><p><strong>show_mask</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Show nnedi3’s mask (Default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Deshimmered clip</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.deinterlace.dir_unsharp">
+<code class="sig-prename descclassname">lvsfunc.deinterlace.</code><code class="sig-name descname">dir_unsharp</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">strength=1.0</em>, <em class="sig-param">dir='v'</em>, <em class="sig-param">h=3.4</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.deinterlace.dir_unsharp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Diff’d directional unsharpening function.
+Special thanks to thebombzen and kageru for essentially writing the bulk of this.</p>
+<p>Performs one-dimensional sharpening as such: “Original + (Original - blurred) * Strength”</p>
+<p>This particular function is recommended for SD content, specifically after deinterlacing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>strength</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Amount to multiply blurred clip with original clip by (Default: 1.0)</p></li>
+<li><p><strong>dir</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Directional vector. ‘v’ = Vertical, ‘h’ = Horizontal (Default: v)</p></li>
+<li><p><strong>h</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Sigma for knlmeans, to prevent noise from getting sharpened (Default: 3.4)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Unsharpened clip</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="lvsfunc-denoise">
+<h1>lvsfunc.denoise<a class="headerlink" href="#lvsfunc-denoise" title="Permalink to this headline">¶</a></h1>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.denoise.quick_denoise" title="lvsfunc.denoise.quick_denoise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.denoise.quick_denoise</span></code></a>(clip[, ref, …])</p></td>
+<td><p>This wrapper is used to denoise both the luma and chroma using various denoisers of your choosing.</p></td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="module-lvsfunc.denoise"></span><p>Wrappers and masks for denoising.</p>
+<dl class="function">
+<dt id="lvsfunc.denoise.quick_denoise">
+<code class="sig-prename descclassname">lvsfunc.denoise.</code><code class="sig-name descname">quick_denoise</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">ref=&lt;class 'NoneType'&gt;</em>, <em class="sig-param">cmode='knlm'</em>, <em class="sig-param">sigma=2</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.denoise.quick_denoise" title="Permalink to this definition">¶</a></dt>
+<dd><p>This wrapper is used to denoise both the luma and chroma using various denoisers of your choosing.
+If you wish to use just one denoiser,
+you’re probably better off using that specific filter rather than this wrapper.</p>
+<p>A rewrite of my old ‘quick_denoise’. I still hate it, but whatever.
+This will probably be removed in a future commit.</p>
+<p>BM3D is used for denoising the luma.</p>
+<p>Special thanks to kageru for helping me out with some ideas and pointers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>cmode</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Chroma denoising modes:
+‘knlm’ - Use knlmeans for denoising the chroma (Default),
+‘tnlm’ - Use tnlmeans for denoising the chroma,
+‘dft’  - Use dfttest for denoising the chroma (requires setting ‘sbsize’ in kwargs),
+‘smd’  - Use SMDegrain for denoising the chroma,</p></li>
+<li><p><strong>sigma</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Denoising strength for BM3D (Default: 2)</p></li>
+<li><p><strong>ref</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Optional reference clip to replace BM3D’s basic estimate</p></li>
+<li><p><strong>kwargs</strong> – Parameters passed to chroma denoiser</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Denoised clip</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="lvsfunc-misc">
+<h1>lvsfunc.misc<a class="headerlink" href="#lvsfunc-misc" title="Permalink to this headline">¶</a></h1>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.misc.edgefixer" title="lvsfunc.misc.edgefixer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.misc.edgefixer</span></code></a>(clip[, left, right, …])</p></td>
+<td><p>A wrapper for ContinuityFixer (<a class="reference external" href="https://github.com/MonoS/VS-ContinuityFixer">https://github.com/MonoS/VS-ContinuityFixer</a>).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.misc.fix_cr_tint" title="lvsfunc.misc.fix_cr_tint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.misc.fix_cr_tint</span></code></a>(clip[, value])</p></td>
+<td><p>Tries to forcibly fix Crunchyroll’s green tint by adding pixel values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.misc.limit_dark" title="lvsfunc.misc.limit_dark"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.misc.limit_dark</span></code></a>(clip, filtered[, …])</p></td>
+<td><p>Replaces frames in a clip with a filtered clip when the frame’s darkness exceeds the threshold.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.misc.replace_ranges" title="lvsfunc.misc.replace_ranges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.misc.replace_ranges</span></code></a>(clip_a, clip_b, …)</p></td>
+<td><p>A replacement for ReplaceFramesSimple that uses ints and tuples rather than a string.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.misc.source" title="lvsfunc.misc.source"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.misc.source</span></code></a>(file[, ref, …])</p></td>
+<td><p>Generic clip import function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.misc.wipe_row" title="lvsfunc.misc.wipe_row"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.misc.wipe_row</span></code></a>(clip[, secondary, …])</p></td>
+<td><p>Simple function to wipe a row with a blank clip.</p></td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="module-lvsfunc.misc"></span><p>Miscellaneous functions and wrappers that didn’t really have a place in any other submodules.</p>
+<dl class="function">
+<dt id="lvsfunc.misc.edgefixer">
+<code class="sig-prename descclassname">lvsfunc.misc.</code><code class="sig-name descname">edgefixer</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">left=None</em>, <em class="sig-param">right=None</em>, <em class="sig-param">top=None</em>, <em class="sig-param">bottom=None</em>, <em class="sig-param">radius=None</em>, <em class="sig-param">full_range=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.misc.edgefixer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for ContinuityFixer (<a class="reference external" href="https://github.com/MonoS/VS-ContinuityFixer">https://github.com/MonoS/VS-ContinuityFixer</a>).</p>
+<p>Fixes the issues with over- and undershoot that it may create when fixing the edges,
+and adds what are in my opinion “more sane” ways of handling the parameters and given values.</p>
+<p>…If possible, you should be using bbmod instead, though.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>left</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]]) – Number of pixels to fix on the left (Default: None)</p></li>
+<li><p><strong>right</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]]) – Number of pixels to fix on the right (Default: None)</p></li>
+<li><p><strong>top</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]]) – Number of pixels to fix on the top (Default: None)</p></li>
+<li><p><strong>bottom</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]]) – Number of pixels to fix on the bottom (Default: None)</p></li>
+<li><p><strong>radius</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]]) – Radius for edgefixing (Default: None)</p></li>
+<li><p><strong>full_range</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Does not run the expression over the clip to fix over/undershoot (Default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Clip with fixed edges</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.misc.fix_cr_tint">
+<code class="sig-prename descclassname">lvsfunc.misc.</code><code class="sig-name descname">fix_cr_tint</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">value=128</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.misc.fix_cr_tint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to forcibly fix Crunchyroll’s green tint by adding pixel values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>value</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Value added to every pixel (Default: 128)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Clip with CR tint fixed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.misc.limit_dark">
+<code class="sig-prename descclassname">lvsfunc.misc.</code><code class="sig-name descname">limit_dark</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">filtered</em>, <em class="sig-param">threshold=0.25</em>, <em class="sig-param">threshold_range=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.misc.limit_dark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces frames in a clip with a filtered clip when the frame’s darkness exceeds the threshold.
+This way you can run lighter (or heavier) filtering on scenes that are almost entirely dark.</p>
+<p>There is one caveat, however: You can get scenes where every other frame is filtered
+rather than the entire scene. Please do take care to avoid that if possible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>filtered</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Filtered clip</p></li>
+<li><p><strong>threshold</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Threshold for frame averages to be filtered (Default: 0.25)</p></li>
+<li><p><strong>threshold_range</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Threshold for a range of frame averages to be filtered (Default: None)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Conditionally filtered clip</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.misc.replace_ranges">
+<code class="sig-prename descclassname">lvsfunc.misc.</code><code class="sig-name descname">replace_ranges</code><span class="sig-paren">(</span><em class="sig-param">clip_a</em>, <em class="sig-param">clip_b</em>, <em class="sig-param">ranges</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.misc.replace_ranges" title="Permalink to this definition">¶</a></dt>
+<dd><p>A replacement for ReplaceFramesSimple that uses ints and tuples rather than a string.
+Frame ranges are inclusive.</p>
+<p>Written by louis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip_a</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Original clip</p></li>
+<li><p><strong>clip_b</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Replacement clip</p></li>
+<li><p><strong>ranges</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]]]) – Ranges to replace clip_a (original clip) with clip_b (replacement clip).
+Integer values in the list indicate single frames,
+Tuple values indicate inclusive ranges.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Clip with ranges from clip_a replaced with clip_b</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.misc.source">
+<code class="sig-prename descclassname">lvsfunc.misc.</code><code class="sig-name descname">source</code><span class="sig-paren">(</span><em class="sig-param">file</em>, <em class="sig-param">ref=None</em>, <em class="sig-param">force_lsmas=False</em>, <em class="sig-param">mpls=False</em>, <em class="sig-param">mpls_playlist=0</em>, <em class="sig-param">mpls_angle=0</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.misc.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic clip import function.
+Automatically determines if ffms2 or L-SMASH should be used to import a clip, but L-SMASH can be forced.
+It also automatically determines if an image has been imported.
+You can set its fps using ‘fpsnum’ and ‘fpsden’, or using a reference clip with ‘ref’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Input file</p></li>
+<li><p><strong>ref</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>]) – Use another clip as reference for the clip’s format, resolution, and framerate (Default: None)</p></li>
+<li><p><strong>force_lsmas</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Force files to be imported with L-SMASH (Default: False)</p></li>
+<li><p><strong>mpls</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Load in a mpls file (Default: False)</p></li>
+<li><p><strong>mpls_playlist</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Playlist number, which is the number in mpls file name (Default: 0)</p></li>
+<li><p><strong>mpls_angle</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Angle number to select in the mpls playlist (Default: 0)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Vapoursynth clip representing input file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.misc.wipe_row">
+<code class="sig-prename descclassname">lvsfunc.misc.</code><code class="sig-name descname">wipe_row</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">secondary=&lt;class 'NoneType'&gt;</em>, <em class="sig-param">width=1</em>, <em class="sig-param">height=1</em>, <em class="sig-param">offset_x=0</em>, <em class="sig-param">offset_y=0</em>, <em class="sig-param">width2=None</em>, <em class="sig-param">height2=None</em>, <em class="sig-param">offset_x2=None</em>, <em class="sig-param">offset_y2=None</em>, <em class="sig-param">show_mask=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.misc.wipe_row" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple function to wipe a row with a blank clip.
+You can also give it a different clip to replace a row with.</p>
+<p>if width2, height2, etc. are given, it will merge the two masks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>secondary</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Clip to replace wiped rows with (Default: None)</p></li>
+<li><p><strong>width</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Width of row (Default: 1)</p></li>
+<li><p><strong>height</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Height of row (Default: 1)</p></li>
+<li><p><strong>offset_x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – X-offset of row (Default: 0)</p></li>
+<li><p><strong>offset_y</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Y-offset of row (Default: 0)</p></li>
+<li><p><strong>width2</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Width of row 2 (Default: None)</p></li>
+<li><p><strong>height2</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Height of row 2 (Default: None)</p></li>
+<li><p><strong>offset_x2</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – X-offset of row 2 (Default: None)</p></li>
+<li><p><strong>offset_y2</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Y-offset of row 2 (Default: None)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Clip with rows wiped</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="lvsfunc-scale">
+<h1>lvsfunc.scale<a class="headerlink" href="#lvsfunc-scale" title="Permalink to this headline">¶</a></h1>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.scale.conditional_descale" title="lvsfunc.scale.conditional_descale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.scale.conditional_descale</span></code></a>(clip, height)</p></td>
+<td><p>Descales and reupscales a clip; if the difference exceeds the threshold, the frame will not be descaled.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.scale.smart_descale" title="lvsfunc.scale.smart_descale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.scale.smart_descale</span></code></a>(clip, resolutions)</p></td>
+<td><p>Allows you to descale to multiple native resolutions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.scale.smart_reupscale" title="lvsfunc.scale.smart_reupscale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.scale.smart_reupscale</span></code></a>(clip[, width, …])</p></td>
+<td><p>A quick ‘n easy wrapper used to re-upscale a clip descaled with smart_descale.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.scale.test_descale" title="lvsfunc.scale.test_descale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.scale.test_descale</span></code></a>(clip, height[, …])</p></td>
+<td><p>Generic function to test descales with; descales and reupscales a given clip, allowing you to compare the two easily.</p></td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="module-lvsfunc.scale"></span><p>Functions for (de)scaling.</p>
+<dl class="function">
+<dt id="lvsfunc.scale.conditional_descale">
+<code class="sig-prename descclassname">lvsfunc.scale.</code><code class="sig-name descname">conditional_descale</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">height</em>, <em class="sig-param">kernel='bicubic'</em>, <em class="sig-param">b=0.3333333333333333</em>, <em class="sig-param">c=0.3333333333333333</em>, <em class="sig-param">taps=4</em>, <em class="sig-param">threshold=0.003</em>, <em class="sig-param">upscaler='nnedi3_rpow2'</em>, <em class="sig-param">**upscale_args</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.scale.conditional_descale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Descales and reupscales a clip; if the difference exceeds the threshold, the frame will not be descaled.
+If it does not exceed the threshold, the frame will upscaled using either nnedi3_rpow2 or waifu2x-caffe.</p>
+<p>Useful for bad BDs that have additional post-processing done on some scenes, rather than all of them.</p>
+<p>Currently only works with bicubic, and has no native 1080p masking.
+Consider scenefiltering OP/EDs with a different descale function instead.</p>
+<p>The code for _get_error was mostly taken from kageru’s Made in Abyss script.
+Special thanks to Lypheo for holding my hand as this was written.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>height</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Target descale height</p></li>
+<li><p><strong>kernel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Kernel used to descale (see <a class="reference internal" href="#lvsfunc.util.get_scale_filter" title="lvsfunc.util.get_scale_filter"><code class="xref py py-func docutils literal notranslate"><span class="pre">lvsfunc.util.get_scale_filter()</span></code></a>, Default: bicubic)</p></li>
+<li><p><strong>b</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – B-param for bicubic kernel (Default: 1 / 3)</p></li>
+<li><p><strong>c</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – C-param for bicubic kernel (Default: 1 / 3)</p></li>
+<li><p><strong>taps</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Taps param for lanczos kernel (Default: 4)</p></li>
+<li><p><strong>threshold</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Threshold for deciding to descale or leave the original frame (Default: 0.003)</p></li>
+<li><p><strong>upscaler</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Which upscaler to use (“nnedi3_rpow2” (default), “upscaled_sraa”, “waifu2x” (caffe))</p></li>
+<li><p><strong>upscale_args</strong> – Arguments passed to upscaler</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Constant-resolution rescaled clip</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.scale.smart_descale">
+<code class="sig-prename descclassname">lvsfunc.scale.</code><code class="sig-name descname">smart_descale</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">resolutions</em>, <em class="sig-param">kernel='bicubic'</em>, <em class="sig-param">b=0</em>, <em class="sig-param">c=0.5</em>, <em class="sig-param">taps=4</em>, <em class="sig-param">thr=0.05</em>, <em class="sig-param">rescale=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.scale.smart_descale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows you to descale to multiple native resolutions.
+Written by kageru, and slightly adjusted by me. Thanks Varde for helping me fix some bugs with it.</p>
+<p>This function will descale clips to multiple resolutions and return the descaled clip
+that is mostly likely to be the actual resolution of the clip. This is useful for shows
+like Shield Hero, Made in Abyss, or Symphogear that love jumping between multiple resolutions.</p>
+<p>The returned clip will be multiple resolutions, meaning most resamplers will break,
+as well as encoding it as-is. When handling it, please ensure you return the clip to
+a steady resolution before further processing.</p>
+<p>Setting rescaled will use <cite>smart_rescaler</cite> to reupscale the clip to its original resolution.
+This will return a proper YUV clip as well. If rescaled is set to False, the returned clip
+will be GRAY.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>resolutions</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – A list of resolutions to descale to</p></li>
+<li><p><strong>kernel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Kernel used to descale (see <a class="reference internal" href="#lvsfunc.util.get_scale_filter" title="lvsfunc.util.get_scale_filter"><code class="xref py py-func docutils literal notranslate"><span class="pre">lvsfunc.util.get_scale_filter()</span></code></a>, Default: bicubic)</p></li>
+<li><p><strong>b</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – B-param for bicubic kernel (Default: 1 / 3)</p></li>
+<li><p><strong>c</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – C-param for bicubic kernel (Default: 1 / 3)</p></li>
+<li><p><strong>taps</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Taps param for lanczos kernel (Default: 4)</p></li>
+<li><p><strong>thr</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Threshold for when a clip is discerned as “non-scaleable” (Default: 0.05)</p></li>
+<li><p><strong>rescale</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Rescale the clip to the original resolution after descaling (Default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Variable-resolution clip containing descaled frames</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.scale.smart_reupscale">
+<code class="sig-prename descclassname">lvsfunc.scale.</code><code class="sig-name descname">smart_reupscale</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">width=None</em>, <em class="sig-param">height=1080</em>, <em class="sig-param">kernel='bicubic'</em>, <em class="sig-param">b=0</em>, <em class="sig-param">c=0.5</em>, <em class="sig-param">taps=4</em>, <em class="sig-param">**znargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.scale.smart_reupscale" title="Permalink to this definition">¶</a></dt>
+<dd><p>A quick ‘n easy wrapper used to re-upscale a clip descaled with smart_descale.
+Uses znedi3, which seems to miraculously work with a multi-res clip.</p>
+<p>Stolen from Varde.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>width</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Upscale width. If None, determine from <cite>height</cite> assuming 16:9 aspect ratio (Default: None)</p></li>
+<li><p><strong>height</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Upscale height (Default: 1080)</p></li>
+<li><p><strong>kernel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Kernel used to upscale (see <a class="reference internal" href="#lvsfunc.util.get_scale_filter" title="lvsfunc.util.get_scale_filter"><code class="xref py py-func docutils literal notranslate"><span class="pre">lvsfunc.util.get_scale_filter()</span></code></a>)</p></li>
+<li><p><strong>b</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – B-param for bicubic kernel (Default: 0)</p></li>
+<li><p><strong>c</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – C-param for bicubic kernel (Default: 1 / 2)</p></li>
+<li><p><strong>taps</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Taps param for lanczos kernel. (Default: 4)</p></li>
+<li><p><strong>znargs</strong> – Arguments passed to znedi3</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Reupscaled clip</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.scale.test_descale">
+<code class="sig-prename descclassname">lvsfunc.scale.</code><code class="sig-name descname">test_descale</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">height</em>, <em class="sig-param">kernel='bicubic'</em>, <em class="sig-param">b=0.3333333333333333</em>, <em class="sig-param">c=0.3333333333333333</em>, <em class="sig-param">taps=3</em>, <em class="sig-param">show_error=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.scale.test_descale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic function to test descales with;
+descales and reupscales a given clip, allowing you to compare the two easily.</p>
+<p>When comparing, it is recommended to do atleast a 4x zoom using Nearest Neighbor.
+I also suggest using ‘compare’, as that will make comparison a lot easier.</p>
+<p>Some of this code was leveraged from DescaleAA found in fvsfunc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>height</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Target descaled height.</p></li>
+<li><p><strong>kernel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Kernel used to descale (see <a class="reference internal" href="#lvsfunc.util.get_scale_filter" title="lvsfunc.util.get_scale_filter"><code class="xref py py-func docutils literal notranslate"><span class="pre">lvsfunc.util.get_scale_filter()</span></code></a>)</p></li>
+<li><p><strong>b</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – B-param for bicubic kernel (Default: 1 / 3)</p></li>
+<li><p><strong>c</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – C-param for bicubic kernel (Default: 1 / 3)</p></li>
+<li><p><strong>taps</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Taps param for lanczos kernel (Default: 3)</p></li>
+<li><p><strong>show_error</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Show diff between the original clip and the reupscaled clip (Default: True)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A clip re-upscaled with the same kernel</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="lvsfunc-util">
+<h1>lvsfunc.util<a class="headerlink" href="#lvsfunc-util" title="Permalink to this headline">¶</a></h1>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.util.create_dmask" title="lvsfunc.util.create_dmask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.util.create_dmask</span></code></a>(clip[, luma_scaling])</p></td>
+<td><p>A wrapper to create a luma mask for denoising, debanding, etc.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.util.get_scale_filter" title="lvsfunc.util.get_scale_filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.util.get_scale_filter</span></code></a>(kernel, **kwargs)</p></td>
+<td><p>kagefunc’s get_descale_filter, but for the internal resizers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.util.one_plane" title="lvsfunc.util.one_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.util.one_plane</span></code></a>(clip)</p></td>
+<td><p>Returns True if the clip contains only one plane.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.util.pick_repair" title="lvsfunc.util.pick_repair"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.util.pick_repair</span></code></a>(clip)</p></td>
+<td><p>Returns rgvs.Repair if the clip is 16 bit or lower, else rgsf.Repair.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lvsfunc.util.quick_resample" title="lvsfunc.util.quick_resample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.util.quick_resample</span></code></a>(clip, function, …)</p></td>
+<td><p>A function to quickly resample to 16 bit and back to the original depth.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lvsfunc.util.resampler" title="lvsfunc.util.resampler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lvsfunc.util.resampler</span></code></a>(clip, bitdepth)</p></td>
+<td><p>Really just a barebones version of fvsfunc’s Depth to remove a common dependency.</p></td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="module-lvsfunc.util"></span><p>Helper functions for the main functions in the script.
+Can be used as-is if you so please.</p>
+<dl class="function">
+<dt id="lvsfunc.util.create_dmask">
+<code class="sig-prename descclassname">lvsfunc.util.</code><code class="sig-name descname">create_dmask</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">luma_scaling=8.0</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.util.create_dmask" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper to create a luma mask for denoising, debanding, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>luma_scaling</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Luma scaling factor (Default: 8.0)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Luma mask</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.util.get_scale_filter">
+<code class="sig-prename descclassname">lvsfunc.util.</code><code class="sig-name descname">get_scale_filter</code><span class="sig-paren">(</span><em class="sig-param">kernel</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.util.get_scale_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>kagefunc’s get_descale_filter, but for the internal resizers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kernel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Resize kernel to use. Currently supports “bilinear”, “spline16”,
+“spline36”, “spline64”, “bicubic”, and “lanczos”</p></li>
+<li><p><strong>kwargs</strong> – Parameters to pass to internal resizers. Parameter c and b
+are automatically bound to filter_param_a and filter_param_b
+respectively for bicubic and taps is bound to filter_param_a for lanczos</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[…, <code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Callable scale function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.util.one_plane">
+<code class="sig-prename descclassname">lvsfunc.util.</code><code class="sig-name descname">one_plane</code><span class="sig-paren">(</span><em class="sig-param">clip</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.util.one_plane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if the clip contains only one plane.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Boolean representing whether the input has one plane or not</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.util.pick_repair">
+<code class="sig-prename descclassname">lvsfunc.util.</code><code class="sig-name descname">pick_repair</code><span class="sig-paren">(</span><em class="sig-param">clip</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.util.pick_repair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns rgvs.Repair if the clip is 16 bit or lower, else rgsf.Repair.
+This is done because rgvs doesn’t work with float, but rgsf does for whatever reason.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[…, <code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Appropriate repair function for input clip’s depth</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.util.quick_resample">
+<code class="sig-prename descclassname">lvsfunc.util.</code><code class="sig-name descname">quick_resample</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">function</em>, <em class="sig-param">**func_args</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.util.quick_resample" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function to quickly resample to 16 bit and back to the original depth.
+Useful for filters that only work in 16 bit or lower when you’re working in float.
+Currently broken.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>function</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[…, <code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>]) – Filter to run after resampling</p></li>
+<li><p><strong>func_args</strong> – Arguments for filter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Filtered clip in original depth</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="lvsfunc.util.resampler">
+<code class="sig-prename descclassname">lvsfunc.util.</code><code class="sig-name descname">resampler</code><span class="sig-paren">(</span><em class="sig-param">clip</em>, <em class="sig-param">bitdepth</em><span class="sig-paren">)</span><a class="headerlink" href="#lvsfunc.util.resampler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Really just a barebones version of fvsfunc’s Depth to remove a common dependency.
+All credit for the original script goes to Frechdachs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code>) – Input clip</p></li>
+<li><p><strong>bidepth</strong> – Depth to resample to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoNode</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Clip resampled to bitdepth</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="footer">
+<h1>Footer<a class="headerlink" href="#footer" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, LightArrowsEXE
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
